@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Task1
+        const students=["Priya","Arun","Divya", "Rahul", "Sneha"];
+        console.log(students[1]);
+        console.log(students[4]);
+
+        students.push("karthik");//Add Karthik
+        console.log(students)
+
+        students.pop();//Remove last element
+        console.log(students);
+
+        const students1=students.slice(1,4);//New Array ["Arun","Divya" and "Rahul"]
+        console.log(students1)
+
+        students.splice(2,1);//Need to remove divya
+        console.log("splicing",students);
+        console.log(students.includes("Priya"));
+
+
+        // Task2
+        const products = [
+                { name: "Laptop", price: 50000 },
+                { name: "Mouse", price: 500 },
+                { name: "keyboard", price: 1500 },
+                { name: "Monitor", price: 1200 },
+                { name: "Headphones", price: 2000 }
+            ];
+
+            const top_price = products.filter(product => product.price > 1000);
+            console.log("Top priced products:", top_price);
+
+            const product_names = top_price.map(product => product.name);
+            console.log("Product names:", product_names);
+
+            const total_price = top_price.reduce((total, product) => total + product.price, 0);
+            console.log("Total price of top priced products:", total_price);
+
+        //Task3-Ascending Order
+        let Task3=[40,10,5,20,30]
+        let res=Task3.sort((a,b)=>a-b)
+        console.log("Ascending",res)
+
+        //Descending Order
+        let des=Task3.sort((a,b)=>b-a)
+        console.log("Descending", des)
+
+        //Task-4
+        let Task4=[10,20,30,40]
+        let c=Task4.reduce((total, mun)=>{
+            return total+mun
+        },0);
+        console.log(c)
+
+        //Task-5 = without initial value (Takes the first value of array as total initial)
+        let Task5 = [10, 20, 30, 40]
+            let d = Task4.reduce((totals, num) => {
+                return totals + num
+            });
+            console.log(d)
+
+        //Task-6 
+        let spl=[10,20,30,40,50];
+        let k=spl.slice(1,3);
+        let j=spl.splice(2,1); //2-index, 1-Number of elements to remove;
+        console.log(k);
+        console.log(j);
+
+        //Task-7 (every- if one value become false all the other becomes false)
+        let u=[10,20,15,5]
+        let result = u.some((n)=>{
+            return n<17
+        })
+        console.log(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body{
+    margin: 5px;
+    background-color: rgb(244, 241, 215);
+    font-weight: 800;
+}
+input{
+    padding: 3px;
+    margin: 3px;
+    color: brown;
+    font-size: large;
+}
+label{
+    padding: 3px;
+    margin: 3px;
+    color: brown;
+    font-size: large;
+}
+textarea{
+    color: brown;
+    font-size: large;
+}
+::placeholder{
+    color: brown;
+}
+button{
+    color: rgb(210, 210, 139);
+    background-color: brown;
+    padding: 10px;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 2px solid goldenrod;
+    margin-right: 100px;
+    
+}
+button:hover{
+    color: brown;
+    background-color: rgb(210, 210, 139);
+}
+fieldset{
+    
+    text-align: center;
+}
+main{
+    background-color: antiquewhite;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 25%;
+    margin-top: 10%;
+    padding: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+}
+td{
+    gap: 5px;
+}
+.heading{
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+form{
+    margin-left: 10px;
+}
