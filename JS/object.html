@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object CRUD (Create, Read, Update, Delete)
+        const employee={
+            name: "Arun",
+            salary: 30000
+        }
+        console.log("Employee Name:",employee.name)
+        console.log("Employee salary",employee["salary"])
+
+        employee.salary=35000;
+        console.log("Employee Salary",employee.salary)
+
+        employee.city ="Chennai";
+        console.log("Updated employee with city",employee)
+        delete employee.city;
+        console.log("Updated employee",employee)
+
+        //Nested Objects
+        const student={
+            name: "Bharath",
+            address: {
+                city:"Chennai",
+                state: "Tamilnadu"
+            }
+        };
+        console.log("Student City: ", student.address.city);
+
+        //Destruction method
+        const {name, salary }=employee;
+        console.log("Employee Name: ",name);
+
+        //rename
+        const user={
+            names:"Priya"
+        };
+        const {
+            names: studentName, //rename
+            city="chennai" //property added
+        } = user;
+        console.log("property updated as: ",studentName);
+        console.log("Chennai",city);
+
+        //spread
+        const original={
+            name:"Priya",
+            age: 21
+        };
+        const updated={
+            ...original,
+            age: 22,
+            city:"Chennai"
+        };
+        console.log(original);
+        console.log(updated);
+
+        const personal={
+            name:"Arun",
+            age:20
+        };
+        const professional={
+            role:"Developer",
+            company: "ABC Tech"
+        };
+        const profile={
+            ...personal,
+            ...professional
+        };
+        console.log(profile)
+
+        //optional chaining
+        const users={
+            name:"Priya",
+            address:{city:" "}
+        };
+        console.log(users.address?.city);
+
+        //Nullish coalescing(??)
+        const aakif=null;
+        const no=911;                                                                  
+        console.log(aakif||"Guest");
+        console.log(no??666);
+
+        let campus;
+        console.log(campus??"S.A");
+
+        console.log(0 || 100)
+        console.log(0 ?? 100)
+        
+
+        
+    </script>
+</body>
+</html>
