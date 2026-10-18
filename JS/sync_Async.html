@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("Start")
+        // setTimeout(function(){
+        //     console.log("set ready");
+        // },2000);
+        // console.log("End")
+
+        const mypromise= new Promise(function(resolve, reject){
+            let paysuccess=true
+            if (paysuccess){
+                resolve("Payment success");
+            }
+            else{
+                reject("Payment Failure");
+            }
+        })
+        mypromise.then(function(result){
+            console.log(result);
+        })
+        .catch(function(error){
+            console.log(error)
+        });
+    </script>
+</body>
+</html>

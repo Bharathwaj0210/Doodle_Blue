@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        //Closure 
+        function account(){
+            let balance=1000;
+            function deposit(amount){
+                balance = balance + amount;
+                console.log("Balance amount: " + balance);
+            }
+            return deposit;
+        }
+        const myaccount=account();
+        myaccount(500);
+        myaccount(700);
+    </script>
+</body>
+</html>

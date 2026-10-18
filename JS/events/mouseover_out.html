@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>7.Mouseover and MouseOut</h1>
+    <p>move the pointer over the box and then away.</p>
+    <div id="target" class="box">Move your pointer over me. <br>
+        <strong>Try moving over this child text.</strong>
+    </div>
+    <p id="result"></p>
+    <script>
+        const target = document.querySelector('#target');
+        const result = document.querySelector('#result');
+
+        target.addEventListener('mouseover', () => {
+            target.style.backgroundColor = "#fed7aa";
+            result.textContent = "mouseover fired";
+        });
+
+        target.addEventListener("mouseout", () => {
+            target.style.backgroundColor = "#dbeafe";
+            result.textContent = "mouseout fired";
+        });
+    </script>
+</body>
+
+</html>

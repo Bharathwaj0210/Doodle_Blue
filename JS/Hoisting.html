@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; font-size: x-large;">HOISTING</h1>
+    <script>
+        //Hoisting
+        // var a;
+        // console.log(a);
+        // a = 10;
+        // console.log(a);
+        // var a = 10;
+
+        let a;
+        console.log(a)
+        a = 10
+        console.log(a)
+        //Temporal Dead Zone
+        // const b;
+        // console.log(b)
+        // b=20
+        // console.log(b)
+
+        greet()
+        function greet() {
+            console.log("Hello")
+        }
+
+        console.log(res)
+        const res = () => {
+            console.log("Print")
+        }
+    </script>
+</body>
+
+</html>
