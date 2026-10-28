@@ -387,6 +387,11 @@ h2 {
 .register-submit:hover {
     background: #105536;
 }
+#form-message {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+}
 .footer {
     text-align: center;
     padding: 30px 6% 15px;

@@ -102,6 +102,7 @@
             <button type="submit" class="register-submit">
                 Register
             </button>
+            <p id="form-message" role="status"></p>
 
         </form>
     </main>
@@ -134,7 +135,29 @@
             &copy; 2026 Know A Fest. All rights reserved.
         </p>
     </footer>
+    <script>
+        const form = document.querySelector(".register-form");
+        const dateInput = document.querySelector("#date");
+        const message = document.querySelector("#form-message");
 
+        const today = new Date().toISOString().split("T")[0];
+        dateInput.min = today;
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            message.textContent = "Registration successful! We will contact you soon.";
+            message.style.color = "#176B45";
+            message.style.fontWeight = "bold";
+
+            form.reset();
+        });
+    </script>
 </body>
 
 </html>
